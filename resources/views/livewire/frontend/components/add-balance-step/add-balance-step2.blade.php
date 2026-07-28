@@ -1,6 +1,6 @@
-<div x-show="$wire.step == 2" x-translate x-cloak class="bg-card border rounded-2xl p-4 space-y-6">
+<div x-show="$wire.step == 2" x-translate x-cloak class="bg-card border rounded-2xl p-2.5 md:p-4 space-y-6">
     <!-- Order ORDER SUMMARY -->
-    <div class="p-4 bg-primary/15 rounded-2xl border border-primary/50 space-y-3">
+    <div class="p-2.5 md:p-4 bg-primary/15 rounded-2xl border border-primary/50 space-y-3">
         <h6 class="text-sm font-semibold text-primary">ORDER SUMMARY</h6>
         <div class="flex items-center gap-2.5">
             <span
@@ -15,11 +15,11 @@
     <!-- Select Your Payment Method -->
     <div class="block space-y-3">
         <span class="text-sm block font-medium text-foreground/80">Select your payment method</span>
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-2 gap-2 md:gap-3">
 
             @foreach ($paymentMethods as $key => $method)
                 <button wire:click="paymentMethod('Transaction Details', {{ $method->id }}, 3)" type="button"
-                    class="p-4 border border-border rounded-2xl bg-background/50 w-full h-28 transition-all cursor-pointer shadow-sm hover:border-primary">
+                    class="p-2.5 md:p-4 border border-border rounded-2xl bg-background/50 w-full h-20 md:h-28 transition-all cursor-pointer shadow-sm hover:border-primary">
                     <img src="{{ asset('assets/images/' . strtolower($method->name) . '.png') }}" alt="image"
                         class="w-full h-full object-contain">
                 </button>

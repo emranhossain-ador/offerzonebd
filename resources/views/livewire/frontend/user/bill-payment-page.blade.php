@@ -1,7 +1,7 @@
 <div class="main-content">
 
     <div
-        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 p-5 shadow-2xl">
+        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 px-2 py-3.5 md:p-5 shadow-2xl">
         <!-- Blur Circles -->
         <div class="absolute -right-5 -top-12 w-30 h-30 bg-white/20 rounded-full">
         </div>
@@ -10,15 +10,16 @@
         <!-- Content -->
         <div class="flex items-center gap-4">
             <!-- Icon -->
-            <a href="{{ route('user.home', 'emran') }}"
-                class="w-14 h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 transition-all hover:bg-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg"
+            <a href="{{ route('user.home', ['username' => $username]) }}"
+                class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 transition-all hover:bg-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg"
                 wire:navigate="">
 
-                <div class="w-9 h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <div
+                    class="w-8 h-8 md:w-9 md:h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="lucide lucide-arrow-left h-5 w-5" aria-hidden="true"
-                        data-tsd-source="/src/components/app/PageHero.tsx:15:13">
+                        stroke-linejoin="round" class="lucide lucide-arrow-left h-4.5 w-4.5 md:h-5 md:w-5"
+                        aria-hidden="true" data-tsd-source="/src/components/app/PageHero.tsx:15:13">
                         <path d="m12 19-7-7 7-7"></path>
                         <path d="M19 12H5"></path>
                     </svg>
@@ -27,7 +28,7 @@
 
             <!-- Text -->
             <div>
-                <h2 class="text-white text-lg font-bold">
+                <h2 class="text-white text-base md:text-lg font-bold">
                     Bill Payment
                 </h2>
                 <p class="text-white/80 text-sm">
@@ -36,7 +37,7 @@
             </div>
         </div>
         <!-- Dotted Decoration -->
-        <div class="absolute right-30 top-4 grid grid-cols-4 gap-2 opacity-30">
+        <div class="absolute right-30 top-4 grid grid-cols-4 gap-1 md:gap-2 opacity-30">
 
             <span class="w-1 h-1 rounded-full bg-white"></span>
             <span class="w-1 h-1 rounded-full bg-white"></span>
@@ -65,7 +66,7 @@
 
         <!-- Form -->
         <form wire:submit.prevent="billPayment" class="card">
-            <div class="card-body p-4 space-y-4">
+            <div class="card-body p-2.5 md:p-4 space-y-4">
 
                 <div class="block">
                     <label class="block text-sm font-medium text-foreground/85 mb-2">Bill Operator <span
@@ -146,7 +147,8 @@
                 <div class="block">
                     <label class="block text-sm font-medium text-foreground/85 mb-2">Mobile Number <span
                             class="text-sm font-bold text-red-500">*</span></label>
-                    <input type="text" class="input" wire:model="mobile_number" placeholder="01XXXXXXXX">
+                    <input type="text" class="input" wire:model="mobile_number" placeholder="01XXXXXXXX"
+                        maxlength="11" minlength="11" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
 
                     @error('mobile_number')
                         <span class="text-red-500 text-xs">{{ $message }}</span>
@@ -188,8 +190,9 @@
                 </div>
 
                 <!-- Note -->
-                <div class="p-4 bg-amber-500/5 border border-amber-500/20 border-l-4 border-l-amber-500 rounded-sm">
-                    <h6 class="text-sm font-medium text-amber-500">
+                <div
+                    class="p-2 md:p-4 bg-amber-500/5 border border-amber-500/20 border-l-4 border-l-amber-500 rounded-sm">
+                    <h6 class="text-xs md:text-sm font-medium text-amber-500">
                         ✅ বিল ২৪–৪৮ ঘণ্টার মধ্যে সম্পন্ন হয় • 📩 সম্পন্ন হলে SMS পাবেন • 💬 প্রয়োজনে সাপোর্টে যোগাযোগ
                         করুন
                     </h6>

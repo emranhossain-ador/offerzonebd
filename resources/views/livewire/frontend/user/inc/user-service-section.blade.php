@@ -1,10 +1,11 @@
-<section class="rounded-2xl border border-border bg-card p-4 backdrop-blur-xl" style="opacity: 1; transform: none">
+<section class="rounded-2xl border border-border bg-card px-2 md:px-4 py-4 backdrop-blur-xl"
+    style="opacity: 1; transform: none">
     <div class="grid grid-cols-4 gap-x-3 gap-y-5">
 
         <a href="{{ route('mobile-recharge', ['username' => _auth()->username]) }}"
             class="group flex flex-col items-center gap-2 " wire:navigate>
             <span
-                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-smartphone h-6 w-6" aria-hidden="true">
@@ -18,7 +19,7 @@
         <a href="{{ route('regular-package', ['username' => _auth()->username]) }}"
             class="group flex flex-col items-center gap-2" wire:navigate>
             <span
-                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-gift h-6 w-6" aria-hidden="true">
@@ -34,7 +35,7 @@
         <a href="{{ route('drive-package', ['username' => _auth()->username]) }}"
             class="group flex flex-col items-center gap-2" wire:navigate>
             <span
-                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="lucide lucide-badge-percent h-6 w-6" aria-hidden="true"
@@ -53,13 +54,13 @@
         <a href="{{ route('bill-payment', ['username' => _auth()->username]) }}"
             class="group flex flex-col items-center gap-2" wire:navigate>
             <span
-                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-receipt h-6 w-6" aria-hidden="true">
-                    <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path>
-                    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
-                    <path d="M12 17.5v-11"></path>
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-receipt w-6.5 h-6.5">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2m4 -14h6m-6 4h6m-2 4h2" />
                 </svg>
             </span>
             <span class="text-center text-[11px] font-medium text-foreground/85">Bill Pay</span>
@@ -68,17 +69,8 @@
         <a href="{{ route('brilliant-recharge', ['username' => _auth()->username]) }}"
             class="group flex flex-col items-center gap-2" wire:navigate>
             <span
-                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-sparkles h-6 w-6" aria-hidden="true">
-                    <path
-                        d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
-                    </path>
-                    <path d="M20 2v4"></path>
-                    <path d="M22 4h-4"></path>
-                    <circle cx="4" cy="20" r="2"></circle>
-                </svg>
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1 ">
+                <img src="{{ asset('assets/images/bri-icon.png') }}" alt="Brilliant" class="h-11 w-11 object-cover">
             </span>
             <span class="text-center text-[11px] font-medium text-foreground/85">Brilliant</span>
         </a>
@@ -86,7 +78,7 @@
         <a href="{{ route('free-fire', ['username' => _auth()->username]) }}"
             class="group flex flex-col items-center gap-2" wire:navigate>
             <span
-                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     aria-hidden="true">
@@ -99,7 +91,7 @@
                     </path>
                 </svg>
             </span>
-            <span class="text-center text-[11px] font-medium text-foreground/85">Free Fire</span>
+            <span class="text-center text-[11px] font-medium text-foreground/85 ">Free Fire</span>
         </a>
 
         {{-- <a href="/menu" class="group flex flex-col items-center gap-2">
@@ -120,7 +112,7 @@
         <a href="{{ route('contact', ['username' => _auth()->username]) }}"
             class="group flex flex-col items-center gap-2" wire:navigate>
             <span
-                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                class="grid h-14 w-14 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" class="lucide lucide-headphones h-6 w-6" aria-hidden="true">

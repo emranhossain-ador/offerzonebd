@@ -2,6 +2,7 @@
 
 use Livewire\Component;
 use App\Models\BillPayment;
+use App\Models\User;
 use App\Models\Notifications;
 
 new class extends Component {
@@ -45,11 +46,13 @@ new class extends Component {
             'failed_reason' => 'required',
         ]);
 
+        $billPayment = BillPayment::with('operator')->where('id', $this->id)->where('user_id', $this->user_id)->first();
+
         BillPayment::where('id', $this->id)
             ->where('user_id', $this->user_id)
             ->update(['status' => 'failed']);
 
-        $billPayment = BillPayment::with('operator')->where('id', $this->id)->where('user_id', $this->user_id)->first();
+        User::where('id', $this->user_id)->increment('balance', $billPayment->amount);
 
         // Notification
         Notifications::create([

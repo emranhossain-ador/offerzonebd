@@ -1,21 +1,23 @@
 <div class="main-content">
 
     <div
-        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 p-5 shadow-2xl">
+        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 px-2 py-3.5 md:p-5 shadow-2xl">
         <!-- Blur Circles -->
         <div class="absolute -right-5 -top-12 w-30 h-30 bg-white/20 rounded-full">
         </div>
         <div class="absolute right-5 -bottom-10 w-24 h-24 bg-white/10 rounded-full">
         </div>
         <!-- Content -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3 md:gap-4">
             <!-- Icon -->
             <div
-                class="w-14 h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg">
+                class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg">
 
-                <div class="w-9 h-9 shrink-0 rounded-full bg-white/20 text-white flex items-center justify-center">
+                <div
+                    class="w-8 h-8 md:w-9 md:h-9 shrink-0 rounded-full bg-white/20 text-white flex items-center justify-center">
                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                        class="text-lg text-white" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        class="text-lg h-4.5 w-4.5 md:h-5 md:w-5 text-white" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z">
                         </path>
@@ -25,7 +27,7 @@
 
             <!-- Text -->
             <div>
-                <h2 class="text-white text-lg font-bold">
+                <h2 class="text-white text-base md:text-lg font-bold">
                     Settings
                 </h2>
                 <p class="text-white/80 text-sm">
@@ -34,7 +36,7 @@
             </div>
         </div>
         <!-- Dotted Decoration -->
-        <div class="absolute right-30 top-4 grid grid-cols-4 gap-2 opacity-30">
+        <div class="absolute right-30 top-4 grid grid-cols-4 gap-1 md:gap-2 opacity-30">
 
             <span class="w-1 h-1 rounded-full bg-white"></span>
             <span class="w-1 h-1 rounded-full bg-white"></span>
@@ -61,23 +63,25 @@
 
 
 
-    <main class="px-1.5 md:px-3.5 py-4">
+    <main class="px-1.5 md:px-3.5 py-2 md:py-4">
 
         <section class="rounded-2xl border border-border bg-card backdrop-blur-xl overflow-hidden">
 
             <ul class="divide-y divide-border">
                 <li>
                     <a href="{{ route('change-password', ['username' => _auth()->username]) }}"
-                        class="flex items-center gap-3 py-3 px-4 transition-all hover:bg-muted/70 dark:hover:bg-muted/70"
+                        class="flex items-center gap-2 md:gap-3 py-2 px-3 md:py-3 md:px-4 transition-all hover:bg-muted/70 dark:hover:bg-muted/70"
                         wire:navigate>
-                        <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#F82769]/10"><svg
-                                stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
-                                class="text-lg text-[#F82769]" height="1em" width="1em"
+                        <div
+                            class="flex h-8 w-8 md:h-9 md:w-9 shrink-0 items-center justify-center rounded-lg bg-[#F82769]/10">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
+                                class="text-base md:text-lg text-[#F82769]" height="1em" width="1em"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z">
                                 </path>
-                            </svg></div>
+                            </svg>
+                        </div>
 
                         <span class="flex-1 text-sm font-semibold">Change Password</span>
 
@@ -121,13 +125,14 @@
                 </li> --}}
 
                 <li>
-                    <div class="flex items-center justify-between gap-3 py-3 px-4 transition-all w-full" wire:navigate>
-                        <div class="flex items-center gap-3">
+                    <div class="flex items-center justify-between gap-2 md:gap-3 py-2 px-3 md:py-3 md:px-4 transition-all w-full"
+                        wire:navigate>
+                        <div class="flex items-center gap-2 md:gap-3">
                             <div
-                                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-purple-50 dark:bg-purple-900/20">
+                                class="flex w-8 h-8 md:h-9 md:w-9 shrink-0 items-center justify-center rounded-lg bg-purple-50 dark:bg-purple-900/20">
                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                                    class="text-lg text-purple-600 dark:text-purple-400" height="1em" width="1em"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                    class="text-base md:text-lg text-purple-600 dark:text-purple-400" height="1em"
+                                    width="1em" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z">
                                     </path>
@@ -155,11 +160,12 @@
 
                 <li>
                     <a href="{{ route('contact', ['username' => _auth()->username]) }}"
-                        class="flex items-center gap-3 py-3 px-4 transition-all hover:bg-muted/70 dark:hover:bg-muted/70"
+                        class="flex items-center gap-2 md:gap-3 py-2 px-3 md:py-3 md:px-4 transition-all hover:bg-muted/70 dark:hover:bg-muted/70"
                         wire:navigate>
-                        <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10">
+                        <div
+                            class="flex w-8 h-8 md:h-9 md:w-9 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                                class="text-lg text-cyan-500" height="1em" width="1em"
+                                class="text-base md:text-lg text-cyan-500" height="1em" width="1em"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d=" M192 208c0-17.67-14.33-32-32-32h-16c-35.35 0-64 28.65-64 64v48c0 35.35 28.65 64
                                 64 64h16c17.67 0 32-14.33 32-32V208zm176 144c35.35 0 64-28.65

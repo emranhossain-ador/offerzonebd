@@ -6,10 +6,10 @@
         <div class="absolute -left-40 -top-20 h-130 w-130 rounded-full conic-bg opacity-30 blur-3xl animate-aurora">
         </div>
         <div
-            class="absolute -right-32 top-1/4 h-[460px] w-[460px] rounded-full conic-bg opacity-25 blur-3xl animate-aurora [animation-delay:-7s]">
+            class="absolute -right-32 top-1/4 h-115 w-115 rounded-full conic-bg opacity-25 blur-3xl animate-aurora [animation-delay:-7s]">
         </div>
         <div
-            class="absolute left-1/2 -bottom-20 h-[380px] w-[760px] -translate-x-1/2 rounded-full bg-linear-to-r from-primary/25 via-accent/15 to-primary-glow/25 blur-3xl animate-blob">
+            class="absolute left-1/2 -bottom-20 h-95 w-190 -translate-x-1/2 rounded-full bg-linear-to-r from-primary/25 via-accent/15 to-primary-glow/25 blur-3xl animate-blob">
         </div>
         <div class="absolute inset-0 grid-bg opacity-60"></div>
         <div class="absolute inset-0 noise-bg opacity-[0.06]"></div>
@@ -80,30 +80,45 @@
                 <span class="block">in 30 seconds.</span>
             </h1>
 
-            <p class="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p class="mt-6 w-[90%] mx-auto md:w-full max-w-xl text-base leading-relaxed text-foreground/90 md:text-lg">
                 All operators
-                <span class="font-semibold text-foreground">MB · Minutes · Combos</span>
+                <span class="font-semibold text-foreground">MB · Minutes · Packages</span>
                 offers, plus
                 <span class="font-semibold text-foreground">Free Fire</span>
                 top-ups — best deals, instant delivery guarantee.
             </p>
 
 
-            <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+            <div
+                class="mt-6 flex flex-wrap justify-center md:justify-start items-center gap-x-5 gap-y-2 text-sm text-foreground/90">
                 <span class="inline-flex items-center gap-1.5">
-                    <i class="ri-flashlight-line text-[15px] text-primary"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-zap size-4 text-[#ff49ba]!" aria-hidden="true"
+                        data-tsd-source="/src/components/hero/Hero.tsx:96:15">
+                        <path
+                            d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
+                        </path>
+                    </svg>
                     Instant Delivery
                 </span>
 
                 <span class="inline-flex items-center gap-1.5">
-                    <i class="ri-headphone-line text-[15px] text-primary"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-headphones size-4 text-[#36dede]"
+                        aria-hidden="true" data-tsd-source="/src/components/hero/Hero.tsx:100:15">
+                        <path
+                            d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3">
+                        </path>
+                    </svg>
                     24/7 Support
                 </span>
             </div>
         </div>
 
         <!-- Right Content -->
-        <div class="relative order-1 animate-fade-up [animation-delay:180ms] md:order-2">
+        <div class="relative order-1 animate-fade-up animate-float [animation-delay:180ms] md:order-2">
             <div class="relative mx-auto aspect-9/16 w-[95%] md:max-w-[320px] lg:max-w-90">
 
                 <div class="absolute -inset-10 rounded-[3rem] conic-bg opacity-35 blur-3xl animate-spin-slow"></div>
@@ -136,14 +151,15 @@
                                         </div>
                                     </div>
                                     <div class="">
-                                        <p class="truncate font-display text-lg font-semibold text-white capitalize">
+                                        <p
+                                            class="truncate font-display text-base md:text-lg font-semibold text-white capitalize">
                                             Emran Khan</p>
                                         <p class="truncate text-sm text-white/80">example@gmail.com</p>
                                     </div>
                                 </div>
 
                                 <!-- Dotted Decoration -->
-                                <div class="absolute right-32 top-4 grid grid-cols-4 gap-2 opacity-30">
+                                <div class="absolute right-32 top-4 grid grid-cols-4 gap-1 opacity-30">
 
                                     <span class="w-1 h-1 rounded-full bg-white"></span>
                                     <span class="w-1 h-1 rounded-full bg-white"></span>
@@ -169,7 +185,7 @@
                             </div>
 
                             <div
-                                class="absolute -bottom-13.75 left-[50%] translate-[-50%] w-[99%] flex items-center gap-5">
+                                class="absolute -bottom-13.75 left-[50%] translate-[-50%] w-[98%] flex items-center gap-5">
 
                                 <div
                                     class="w-full flex items-center gap-3 rounded-2xl border border-border bg-card p-2">
@@ -224,7 +240,7 @@
 
                                 <div class="group flex flex-col items-center gap-2 ">
                                     <span
-                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -240,7 +256,7 @@
 
                                 <div class="group flex flex-col items-center gap-2">
                                     <span
-                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -259,7 +275,7 @@
 
                                 <div class="group flex flex-col items-center gap-2">
                                     <span
-                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -279,16 +295,14 @@
 
                                 <div class="group flex flex-col items-center gap-2">
                                     <span
-                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-receipt h-5 w-5" aria-hidden="true">
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-receipt w-5.5 h-5.5">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <path
-                                                d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z">
-                                            </path>
-                                            <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
-                                            <path d="M12 17.5v-11"></path>
+                                                d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16l-3 -2l-2 2l-2 -2l-2 2l-2 -2l-3 2m4 -14h6m-6 4h6m-2 4h2" />
                                         </svg>
                                     </span>
                                     <span class="text-center text-[11px] font-medium text-foreground/85">Bill
@@ -297,18 +311,9 @@
 
                                 <div class="group flex flex-col items-center gap-2">
                                     <span
-                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-sparkles h-5 w-5" aria-hidden="true">
-                                            <path
-                                                d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z">
-                                            </path>
-                                            <path d="M20 2v4"></path>
-                                            <path d="M22 4h-4"></path>
-                                            <circle cx="4" cy="20" r="2"></circle>
-                                        </svg>
+                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient transition-transform duration-500 group-hover:-translate-y-1">
+                                        <img src="{{ asset('assets/images/bri-icon.png') }}" alt="Brilliant"
+                                            class="h-10 w-10 object-cover">
                                     </span>
                                     <span
                                         class="text-center text-[11px] font-medium text-foreground/85">Brilliant</span>
@@ -316,7 +321,7 @@
 
                                 <div class="group flex flex-col items-center gap-2">
                                     <span
-                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -340,7 +345,7 @@
 
                                 <div class="group flex flex-col items-center gap-2">
                                     <span
-                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-primary-foreground transition-transform duration-500 group-hover:-translate-y-1">
+                                        class="grid h-12 w-12 shrink-0 place-items-center rounded-3xl tile-gradient text-white transition-transform duration-500 group-hover:-translate-y-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -375,26 +380,24 @@
                                     class="w-full rounded-xl border border-border p-2.5 text-left bg-background/30 transition-colors animate-fade-up">
                                     <div class="flex items-center gap-2.5">
                                         <div
-                                            class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-transparent">
+                                            class="flex h-9 w-9 md:h-10 md:w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-transparent">
                                             <img src="{{ asset('assets/images/pay-methods/bkash.webp') }}"
                                                 alt="" class="h-full w-full rounded-lg object-cover">
                                         </div>
                                         <div class="min-w-0 flex-1">
-                                            <div class="flex items-center justify-between gap-2">
+                                            <div class="flex items-center justify-between gap-1">
                                                 <span
-                                                    class="text-left text-sm font-bold text-foreground/90 capitalize">Bkash
+                                                    class="text-left text-sm font-normal md:font-bold text-foreground/90 capitalize">Bkash
                                                     Send Money</span>
                                                 <label
-                                                    class="px-2.5 py-1 text-xs font-semibold tracking-wide bg-emerald-500 rounded-full text-white shadow-[0_3px_5px] shadow-emerald-500/30">Success</label>
+                                                    class="text-xs font-semibold tracking-wide text-emerald-500">Success</label>
                                             </div>
                                             <!-- Amount -->
                                             <div class="flex items-center justify-between mt-1">
-                                                <span class="text-sm font-semibold text-foreground/70">300.00
+                                                <span class="text-xs md:text-sm font-semibold text-foreground/70">200
                                                     Taka</span>
-
-                                                <span class="text-xs font-normal text-foreground/70">26 July, 2026
-                                                    06:34 PM
-                                                </span>
+                                                <span class="text-[11px] md:text-xs font-normal text-foreground/70">20
+                                                    July, 2026 06:34 PM </span>
                                             </div>
                                         </div>
                                     </div>
@@ -404,25 +407,23 @@
                                     class="w-full rounded-xl border border-border p-2.5 text-left bg-background/30 transition-colors animate-fade-up">
                                     <div class="flex items-center gap-2.5">
                                         <div
-                                            class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-transparent">
-                                            <img src="{{ asset('assets/images/operator/robi.webp') }}" alt=""
-                                                class="h-full w-full rounded-lg object-cover">
+                                            class="flex h-9 w-9 md:h-10 md:w-10 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-transparent">
+                                            <img src="{{ asset('assets/images/operator/airtel.webp') }}"
+                                                alt="" class="h-full w-full rounded-lg object-cover">
                                         </div>
                                         <div class="min-w-0 flex-1">
-                                            <div class="flex items-center justify-between gap-2">
+                                            <div class="flex items-center justify-between gap-1">
                                                 <span
-                                                    class="text-left text-sm font-bold text-foreground/90 capitalize">01234567891</span>
+                                                    class="text-left text-sm font-normal md:font-bold text-foreground/90 capitalize">01612737812</span>
                                                 <label
-                                                    class="px-2.5 py-1 text-xs font-semibold tracking-wide bg-emerald-500 rounded-full text-white shadow-[0_3px_5px] shadow-emerald-500/30">Success</label>
+                                                    class="text-xs font-semibold tracking-wide text-sky-500">Pending</label>
                                             </div>
                                             <!-- Amount -->
                                             <div class="flex items-center justify-between mt-1">
-                                                <span class="text-sm font-semibold text-foreground/70">300.00
+                                                <span class="text-xs md:text-sm font-semibold text-foreground/70">300
                                                     Taka</span>
-
-                                                <span class="text-xs font-normal text-foreground/70">26 July, 2026
-                                                    06:34 PM
-                                                </span>
+                                                <span class="text-[11px] md:text-xs font-normal text-foreground/70">26
+                                                    July, 2026 06:34 PM </span>
                                             </div>
                                         </div>
                                     </div>

@@ -1,11 +1,11 @@
-<div x-show="$wire.step == 3" x-translate x-cloak class="bg-card border rounded-2xl p-4 space-y-6">
+<div x-show="$wire.step == 3" x-translate x-cloak class="bg-card border rounded-2xl p-2.5 md:p-4 space-y-6">
     <!-- Order ORDER SUMMARY -->
-    <div class="p-4 bg-primary/15 rounded-2xl border border-primary/50 flex items-center justify-between">
+    <div class="p-2.5 md:p-4 bg-primary/15 rounded-2xl border border-primary/50 flex items-center justify-between">
         <div class="space-y-3">
             <h6 class="text-sm font-semibold text-primary">ORDER SUMMARY</h6>
             <div class="flex items-center gap-2.5">
                 <span
-                    class="px-2.5 py-1 bg-card/60 backdrop-blur-md text-xs font-semibold text-pink-500 rounded-full">Recharge
+                    class="px-1.5 md:px-2.5 py-1 bg-card/60 backdrop-blur-md text-xs font-semibold text-pink-500 rounded-full">Recharge
                     Amount</span>
                 <span
                     class="px-2.5 py-1 bg-card/60 backdrop-blur-md text-xs font-semibold text-pink-500 rounded-full tracking-wide">৳
@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class="h-10 w-20 p-[3px]">
+        <div class="h-8 w-16 md:h-10 md:w-20 p-0.75">
             <img src="{{ asset('assets/images/' . $pay_method_name . '.png') }}" alt=""
                 class="w-full h-full object-contain">
         </div>
@@ -24,20 +24,20 @@
     <div class="py-1 border border-border rounded-2xl bg-background/50">
         <ul class="divide-y divide-border">
 
-            <li class="px-4 py-3 flex items-center justify-between">
-                <span class="text-sm font-semibold text-foreground/90 capitalize">{{ $pay_method_name }} Send
+            <li class="px-2 md:px-4 py-1.5 md:py-3 flex items-center justify-between">
+                <span class="text-xs md:text-sm font-semibold text-foreground/90 capitalize">{{ $pay_method_name }} Send
                     Money</span>
                 <div class="flex items-center gap-2">
-                    <span class="text-sm font-semibold text-foreground/90">{{ $payment_number }}</span>
+                    <span class="text-sm md:text-sm font-semibold text-foreground/90">{{ $payment_number }}</span>
                     <button type="button" data-copy="{{ $payment_number }}"
-                        class="copyBtn w-8 h-8 shrink-0 flex justify-center items-center rounded-md border border-border bg-border/50 text-foreground/80 cursor-pointer">
+                        class="copyBtn w-7 h-7 shrink-0 md:w-8 md:h-8 flex justify-center items-center rounded-md border border-border bg-border/50 text-foreground/80 cursor-pointer">
                         <i class="ri-file-copy-line"></i>
                     </button>
                 </div>
             </li>
 
-            <li class="px-4 py-3 flex items-center justify-between">
-                <span class="text-sm font-normal text-foreground/90">Amount</span>
+            <li class="px-2 md:px-4 py-1.5 md:py-3 flex items-center justify-between">
+                <span class="text-xs md:text-sm font-normal text-foreground/90">Amount</span>
                 <span class="text-sm font-semibold text-foreground/90 tracking-wide">৳ {{ $amount }}</span>
             </li>
 
@@ -45,12 +45,13 @@
     </div>
 
     <!-- Input Area -->
-    <form wire:submit.prevent="addbalance" class="space-y-4">
+    <form wire:submit.prevent="addbalance" class="space-y-3 md:space-y-4">
 
         <div class="block">
             <span class="mb-1.5 pl-1 block text-sm font-medium text-muted-foreground">Sender Number <span
                     class="text-red-500 font-bold text-sm">*</span></span>
-            <input type="text" wire:model.live="sender_number" class="input" placeholder="Enter sender number">
+            <input type="text" wire:model.live="sender_number" class="input" placeholder="Enter sender number"
+                maxlength="11" minlength="11" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
             @error('sender_number')
                 <span class="text-red-500 text-sm">{{ $message }}</span>
             @enderror
@@ -66,8 +67,8 @@
         </div>
 
 
-        <div class="p-4 bg-amber-500/5 border border-amber-500/20 border-l-4 border-l-amber-500 rounded-sm">
-            <h6 class="text-sm font-medium text-amber-500">
+        <div class="p-2 md:p-4 bg-amber-500/5 border border-amber-500/20 border-l-4 border-l-amber-500 rounded-sm">
+            <h6 class="text-xs md:text-sm font-medium text-amber-500">
                 🟡 ভুল তথ্য দিলে ব্যালেন্স যোগ হবে না এবং আপনার অ্যাকাউন্ট ব্লক করা হতে পারে।
             </h6>
         </div>

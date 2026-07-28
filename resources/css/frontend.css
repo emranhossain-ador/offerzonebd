@@ -59,7 +59,6 @@
     --input: lab(18.4901% 1.77544 -14.5624/.6);
     --ring: lab(64.1627% 45.1255 -71.1293);
     --surface: lab(4.98302% 2.21403 -13.4995);
-
 }
 
 
@@ -100,7 +99,9 @@
     --color-gradient-primary: linear-gradient(135deg, oklch(58% .23 295), oklch(78% .16 200));
     --color-success: lab(75% -55 40);
     --color-warning: lab(80% 10 75);
-    --color-surface: var(--surface)
+    --color-surface: var(--surface);
+    --color-hero-violet: oklch(65% .24 300);
+    --color-hero-pink: oklch(72% .25 350);
 }
 
 
@@ -347,7 +348,7 @@
 
 
     .main-content {
-        @apply w-full md:max-w-[460px] lg:max-w-[560px] mx-auto bg-background overflow-y-auto scrollbar-none space-y-4;
+        @apply w-full md:max-w-115 lg:max-w-140 mx-auto bg-background overflow-y-auto scrollbar-none space-y-4;
     }
 
     .main-content {
@@ -355,9 +356,7 @@
     }
 
     .tile-gradient {
-        background: linear-gradient(135deg,
-                color-mix(in oklab, var(--primary) 92%, black 4%),
-                color-mix(in oklab, var(--primary-glow) 80%, var(--primary) 20%));
+        background-image: linear-gradient(145deg, var(--color-hero-violet), var(--color-hero-pink));
     }
 
 
@@ -379,5 +378,6 @@
     .animate-marquee:hover {
         animation-play-state: paused;
     }
+
 
 }

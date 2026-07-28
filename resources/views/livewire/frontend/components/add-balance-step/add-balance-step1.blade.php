@@ -1,18 +1,20 @@
 <form wire:submit.prevent="rechargeAmount" x-show="$wire.step == 1" x-translate x-cloak
-    class="bg-card border rounded-2xl p-4 space-y-4">
+    class="bg-card border rounded-2xl p-2.5 md:p-4 space-y-3 md:space-y-4">
     <h4
         class="text-center px-4 py-1 bg-primary/20 border border-primary/50 text-primary w-fit text-sm font-semibold rounded-full mx-auto">
         Recharge</h4>
 
-    <div class="rounded-2xl border border-border bg-background/40 p-6 text-center">
+    <div class="rounded-2xl border border-border bg-background/40 p-4 md:p-6 text-center">
         <p class="text-sm font-semibold text-muted-foreground">Amount</p>
 
         <div class="mt-3 flex items-center justify-center gap-3">
 
-            <span class="font-display text-4xl font-bold text-primary-glow">৳</span>
+            <span class="font-display text-3xl md:text-4xl font-bold text-primary-glow">৳</span>
 
             <input placeholder="0" inputmode="numeric" wire:model.live="amount"
-                class="w-40 bg-transparent text-center font-display text-4xl font-bold tabular-nums outline-none placeholder:text-muted-foreground/50 text-foreground/60 dark:text-gray-400">
+                class="w-40 bg-transparent text-center font-display text-4xl font-bold tabular-nums outline-none placeholder:text-muted-foreground/50 text-foreground/60 dark:text-gray-400"
+                maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\d{5}).*/, '$1')"
+                min="50" max="50000">
 
         </div>
 
@@ -57,8 +59,8 @@
         </div>
     </div>
 
-    <div class="p-4 bg-amber-500/5 border border-amber-500/20 border-l-4 border-l-amber-500 rounded-sm">
-        <h6 class="text-sm font-medium text-amber-500">
+    <div class="p-2 md:p-4 bg-amber-500/5 border border-amber-500/20 border-l-4 border-l-amber-500 rounded-sm">
+        <h6 class="text-xs md:text-sm font-medium text-amber-500">
             ⚠️ সঠিক টাকার পরিমাণ নির্বাচন করুন। ব্যালেন্স যোগ হওয়ার পর টাকার পরিমাণ পরিবর্তন বা রিফান্ড সম্ভব নয়।
         </h6>
     </div>

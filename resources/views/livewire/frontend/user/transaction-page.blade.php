@@ -1,23 +1,24 @@
 <div class="main-content">
 
     <div
-        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 p-5 shadow-2xl">
+        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500  px-2 py-3.5 md:p-5 shadow-2xl">
         <!-- Blur Circles -->
         <div class="absolute -right-5 -top-12 w-30 h-30 bg-white/20 rounded-full">
         </div>
         <div class="absolute right-5 -bottom-10 w-24 h-24 bg-white/10 rounded-full">
         </div>
         <!-- Content -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3 md:gap-4">
             <!-- Icon -->
             <div
-                class="w-14 h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg">
+                class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg">
 
-                <div class="w-9 h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <div
+                    class="w-8 h-8 md:w-9 md:h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-list">
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-clipboard-list h-4.5 w-4.5 md:h-5 md:w-5">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" />
                         <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" />
@@ -31,7 +32,7 @@
 
             <!-- Text -->
             <div class="flex-1">
-                <h2 class="text-white text-lg font-bold">
+                <h2 class="text-white text-base md:text-lg font-bold">
                     Transactions
                 </h2>
                 <p class="text-white/80 text-sm">
@@ -41,7 +42,7 @@
 
         </div>
         <!-- Dotted Decoration -->
-        <div class="absolute right-30 top-4 grid grid-cols-4 gap-2 opacity-30">
+        <div class="absolute right-30 top-4 grid grid-cols-4 gap-1 md:gap-2 opacity-30">
 
             <span class="w-1 h-1 rounded-full bg-white"></span>
             <span class="w-1 h-1 rounded-full bg-white"></span>
@@ -102,7 +103,7 @@
                             <div class="min-w-0 flex-1">
                                 <div class="flex items-center justify-between gap-2">
                                     <span
-                                        class="text-left text-base font-bold text-foreground/90 capitalize">{{ $depositInfo->payment_method }}
+                                        class="text-left text-sm md:text-base font-bold text-foreground/90 capitalize">{{ $depositInfo->payment_method }}
                                         Send Money</span>
 
                                     @if ($row->status == 'pending')
@@ -154,7 +155,7 @@
                             <div class="min-w-0 flex-1">
                                 <div class="flex items-center justify-between gap-2">
                                     <span
-                                        class="text-left text-base font-bold text-foreground/90">{{ $rechargeInfo->mobile_number }}</span>
+                                        class="text-left text-sm md:text-base font-bold text-foreground/90">{{ $rechargeInfo->mobile_number }}</span>
 
                                     @if ($rechargeInfo->status == 'pending')
                                         <label
@@ -199,7 +200,7 @@
                             <div class="min-w-0 flex-1">
                                 <div class="flex items-center justify-between gap-2">
                                     <span
-                                        class="text-left text-base font-bold text-foreground/90">{{ $brilliantRechargeInfo->brilliant_number }}</span>
+                                        class="text-left text-sm md:text-base font-bold text-foreground/90">{{ $brilliantRechargeInfo->brilliant_number }}</span>
 
                                     @if ($brilliantRechargeInfo->status == 'pending')
                                         <label
@@ -245,7 +246,7 @@
                             <div class="min-w-0 flex-1">
                                 <div class="flex items-center justify-between gap-2">
                                     <span
-                                        class="text-left text-base font-bold text-foreground/90">{{ $billPaymentInfo->operator->title }}</span>
+                                        class="text-left text-sm md:text-base font-bold text-foreground/90">{{ $billPaymentInfo->operator->title }}</span>
 
                                     @if ($billPaymentInfo->status == 'pending')
                                         <label
@@ -283,7 +284,7 @@
     <div x-data x-cloak x-show="$wire.showDetails" x-transition:enter="ease-out duration-300"
         x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
         x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+        x-transition:leave-end="opacity-0" class="fixed inset-0 z-50 flex items-center justify-center p-1 md:p-4">
         <!-- Backdrop -->
         <div class="absolute inset-0 bg-gray-950/60 backdrop-blur-md" wire:click="closeDetails"></div>
 
@@ -296,7 +297,7 @@
             class="relative z-10 w-full max-w-lg overflow-hidden rounded-2xl border border-border bg-card text-left shadow-2xl">
 
             <!-- Header -->
-            <div class="relative overflow-hidden bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 p-3 md:p-5">
+            <div class="relative overflow-hidden bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 p-2 md:p-4">
                 <!-- Decorative Circles -->
                 <div class="absolute -right-8 -top-10 h-28 w-28 rounded-full bg-white/10"></div>
                 <div class="absolute -bottom-12 right-12 h-24 w-24 rounded-full bg-white/10"></div>
@@ -304,7 +305,7 @@
                 <div class="relative flex items-center gap-3">
                     <!-- Icon -->
                     <div
-                        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/15 shadow-lg backdrop-blur-md">
+                        class="flex h-10 md:h-11 w-10 md:w-11 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/15 shadow-lg backdrop-blur-md">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" class="lucide lucide-wallet h-6 w-6 transition-all  text-white"
@@ -319,7 +320,7 @@
 
                     <!-- Title -->
                     <div class="min-w-0 flex-1">
-                        <h3 class="line-clamp-2 text-lg font-semibold text-white">
+                        <h3 class="line-clamp-1 text-base md:text-lg font-semibold text-white">
                             Transaction Details
                         </h3>
                     </div>
@@ -333,7 +334,7 @@
             </div>
 
             <!-- Body -->
-            <div class="p-3 md:p-5">
+            <div class="p-2 md:p-4">
                 <ul class="divide-y divide-border w-full border border-border rounded-2xl bg-background/50">
                     @if ($selectedTransaction?->type === 'deposit')
                         @php
@@ -341,17 +342,17 @@
                                 ->where('user_id', _auth()->id)
                                 ->first();
                         @endphp
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Sender Number</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ $depositInfo->sender_number }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Amount</span>
                             <span class="text-sm font-semibold text-foreground/90">৳
                                 {{ number_format($depositInfo->amount, 2) }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Status</span>
 
                             @if ($depositInfo->status == 'pending')
@@ -362,16 +363,16 @@
                                 <span class="text-sm font-semibold text-red-500 capitalize">failed</span>
                             @endif
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Payment Number</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ $depositInfo->payment_number }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Transaction ID</span>
                             <span class="text-sm font-semibold text-foreground/90">{{ $depositInfo->trx_id }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Payment Method</span>
                             <span class="text-sm font-semibold text-foreground/90 flex items-center gap-2">
                                 <img src="{{ asset('assets/images/pay-methods/' . $depositInfo->payment_method . '.webp') }}"
@@ -379,13 +380,13 @@
                                 {{ $depositInfo->payment_method }}
                             </span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Date & Time</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ date('M d, Y h:i A', strtotime($depositInfo->created_at)) }}</span>
                         </li>
                         @if ($depositInfo->status == 'rejected')
-                            <li class="flex items-center justify-between px-4 py-3">
+                            <li class="flex items-center justify-between px-2 md:px-4 py-3">
                                 <h5 class="text-sm font-semibold text-foreground/80">
                                     Reject Reason:
                                     <span
@@ -400,17 +401,17 @@
                                 ->where('user_id', _auth()->id)
                                 ->first();
                         @endphp
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Mobile Number</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ $rechargeInfo->mobile_number }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Amount</span>
                             <span class="text-sm font-semibold text-foreground/90">৳
                                 {{ number_format($rechargeInfo->amount, 2) }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Operator</span>
                             <span class="text-sm font-semibold text-foreground/90 flex items-center gap-2 capitalize">
                                 @if ($rechargeInfo->operator == 'banglalink')
@@ -423,7 +424,7 @@
                                 {{ $rechargeInfo->operator }}
                             </span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Status</span>
 
                             @if ($rechargeInfo->status == 'pending')
@@ -434,7 +435,7 @@
                                 <span class="text-sm font-semibold text-red-500 capitalize">failed</span>
                             @endif
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Date & Time</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ date('M d, Y h:i A', strtotime($rechargeInfo->created_at)) }}</span>
@@ -449,17 +450,17 @@
                                 ->first();
                         @endphp
 
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Brilliant Number</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ $brilliantRechargeInfo->brilliant_number }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Amount</span>
                             <span class="text-sm font-semibold text-foreground/90">৳
                                 {{ number_format($brilliantRechargeInfo->amount, 2) }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Status</span>
 
                             @if ($brilliantRechargeInfo->status == 'pending')
@@ -470,7 +471,7 @@
                                 <span class="text-sm font-semibold text-red-500 capitalize">failed</span>
                             @endif
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Date & Time</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ date('M d, Y h:i A', strtotime($brilliantRechargeInfo->created_at)) }}</span>
@@ -483,23 +484,23 @@
                                 ->first();
                         @endphp
 
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Operator</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ ucwords($billPaymentInfo->operator->title) }}</span>
                         </li>
 
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Mobile Number</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ $billPaymentInfo->mobile_number }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Amount</span>
                             <span class="text-sm font-semibold text-foreground/90">৳
                                 {{ number_format($billPaymentInfo->amount, 2) }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Status</span>
 
                             @if ($billPaymentInfo->status == 'pending')
@@ -510,17 +511,17 @@
                                 <span class="text-sm font-semibold text-red-500 capitalize">failed</span>
                             @endif
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Month</span>
                             <span class="text-sm font-semibold text-foreground/90 capitalize">
                                 {{ $billPaymentInfo->month }}</span>
                         </li>
-                        <li class="flex items-center justify-between px-4 py-3">
+                        <li class="flex items-center justify-between px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Date & Time</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ date('M d, Y h:i A', strtotime($billPaymentInfo->created_at)) }}</span>
                         </li>
-                        <li class="flex flex-col px-4 py-3">
+                        <li class="flex flex-col px-2 md:px-4 py-3">
                             <span class="text-sm font-normal text-foreground/80">Note:</span>
                             <span
                                 class="text-sm font-semibold text-foreground/90">{{ $billPaymentInfo->note ?? 'N/A' }}</span>
@@ -531,7 +532,7 @@
             </div>
 
             <!-- Footer -->
-            <div class="flex items-center justify-end border-t border-border bg-card/50 px-3 py-2.5 md:px-5 md:py-4">
+            <div class="flex items-center justify-end border-t border-border bg-card/50 p-2 md:p-4">
                 <button type="button" wire:click="closeDetails"
                     class="flex items-center gap-2 rounded-lg bg-airtel px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:scale-[1.02] hover:shadow-lg cursor-pointer">
                     <i class="ri-check-line"></i>

@@ -11,6 +11,13 @@ new class extends Component {
     {
         return BillPayment::with('user:id,name')->with('operator')->latest()->paginate(50);
     }
+
+    protected $listeners = ['refresh-table' => 'refresh'];
+
+    public function refresh()
+    {
+        $this->billPaymentRequest();
+    }
 };
 ?>
 
@@ -58,7 +65,7 @@ new class extends Component {
                                     Details
                                 </a>
 
-                                <button onclick="confirmDelete(1, 'add_balance')"
+                                <button onclick="confirmDelete({{ $billPayment->id }}, 'bill_payments')"
                                     class="px-2.5 py-1.5 rounded bg-red-500 text-sm text-white shadow-[0_2px_5px] shadow-red-500/50 hover:shadow-none hover:bg-transparent hover:text-red-500 border border-red-500 font-normal transition-colors duration-200 cursor-pointer whitespace-nowrap">
                                     <i class="ri-delete-bin-line"></i>
                                     Delete

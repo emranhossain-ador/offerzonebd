@@ -1,23 +1,24 @@
 <div class="main-content">
     <div
-        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 p-5 shadow-2xl">
+        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 px-2 py-3.5 md:p-5 shadow-2xl">
         <!-- Blur Circles -->
         <div class="absolute -right-5 -top-12 w-30 h-30 bg-white/20 rounded-full">
         </div>
         <div class="absolute right-5 -bottom-10 w-24 h-24 bg-white/10 rounded-full">
         </div>
         <!-- Content -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3 md:gap-4">
             <!-- Icon -->
             <a href="{{ route('user.home', ['username' => $username]) }}"
-                class="w-14 h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 transition-all hover:bg-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg"
+                class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 transition-all hover:bg-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg"
                 wire:navigate>
 
-                <div class="w-9 h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <div
+                    class="w-8 h-8 md:w-9 md:h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="lucide lucide-arrow-left h-5 w-5" aria-hidden="true"
-                        data-tsd-source="/src/components/app/PageHero.tsx:15:13">
+                        stroke-linejoin="round" class="lucide lucide-arrow-left h-4.5 w-4.5 md:h-5 md:w-5"
+                        aria-hidden="true" data-tsd-source="/src/components/app/PageHero.tsx:15:13">
                         <path d="m12 19-7-7 7-7"></path>
                         <path d="M19 12H5"></path>
                     </svg>
@@ -26,7 +27,7 @@
 
             <!-- Text -->
             <div class="flex-1">
-                <h2 class="text-white text-lg font-bold">
+                <h2 class="text-white text-base md:text-lg font-bold">
                     Notifications
                 </h2>
                 <p class="text-white/80 text-sm">
@@ -41,7 +42,7 @@
 
         </div>
         <!-- Dotted Decoration -->
-        <div class="absolute right-30 top-4 grid grid-cols-4 gap-2 opacity-30">
+        <div class="absolute right-30 top-4 grid grid-cols-4 gap-1 md:gap-2 opacity-30">
 
             <span class="w-1 h-1 rounded-full bg-white"></span>
             <span class="w-1 h-1 rounded-full bg-white"></span>
@@ -67,18 +68,18 @@
     </div>
 
 
-    <main class="px-1.5 md:px-3.5 py-4 space-y-4">
+    <main class="px-1.5 md:px-3.5 py-2 md:py-4 space-y-4">
 
         @if ($this->notifications->isNotEmpty())
             <!-- Action btn -->
             <div class="flex items-center gap-3.5">
                 <a href="{{ route('notification-page', ['username' => $username]) }}" wire:navigate
-                    class="px-5.5 py-2 bg-card/80 border border-border rounded-md shadow-sm flex items-center gap-2.5 text-sm font-semibold text-foreground transition-all hover:text-primary hover:border-primary cursor-pointer">
+                    class="px-5.5 py-2 w-full md:w-fit bg-card/80 border border-border rounded-md shadow-sm flex items-center gap-2.5 text-sm font-semibold text-foreground transition-all hover:text-primary hover:border-primary cursor-pointer">
                     <i class="ri-loop-right-line font-normal! text-lg"></i>
                     Refrash
                 </a>
                 <button type="button" wire:click="deleteAllNotifications()"
-                    class="px-5.5 py-2 bg-card/80 border border-border rounded-md shadow-sm flex items-center gap-2.5 text-sm font-semibold text-red-500 transition-all hover:border-red-500 cursor-pointer">
+                    class="px-5.5 py-2 w-full md:w-fit bg-card/80 border border-border rounded-md shadow-sm flex items-center gap-2.5 text-sm font-semibold text-red-500 transition-all hover:border-red-500 cursor-pointer">
                     <i class="ri-delete-bin-line font-normal! text-lg text-red-500"></i>
                     Delete All
                 </button>
@@ -113,11 +114,9 @@
                             </div>
 
                             <div class="min-w-0 flex-1">
-                                <div class="flex items-center justify-between gap-2 mb-1">
-                                    <h3 class="line-clamp-1 text-xs font-bold text-foreground">
-                                        {{ $notification->title }}
-                                    </h3>
-                                </div>
+                                <h3 class="line-clamp-1 text-xs font-bold text-foreground">
+                                    {{ $notification->title }}
+                                </h3>
                                 <p class="line-clamp-1 text-[11px] leading-snug text-foreground/80 ">
                                     {{ $notification->description }}
                                 </p>
@@ -153,7 +152,7 @@
     <div x-data x-cloak x-show="$wire.showNotification" x-transition:enter="ease-out duration-300"
         x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
         x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0" class="fixed inset-0 z-50 flex items-center justify-center p-4">
+        x-transition:leave-end="opacity-0" class="fixed inset-0 z-50 flex items-center justify-center p-1 md:p-4">
         <!-- Backdrop -->
         <div class="absolute inset-0 bg-gray-950/60 backdrop-blur-md" wire:click="closeNotification"></div>
 
@@ -166,12 +165,12 @@
             class="relative z-10 w-full max-w-lg overflow-hidden rounded-2xl border border-border bg-card text-left shadow-2xl">
 
             <!-- Header -->
-            <div class="relative overflow-hidden bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 px-5 py-5">
+            <div class="relative overflow-hidden bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 p-2 md:p-4">
                 <!-- Decorative Circles -->
                 <div class="absolute -right-8 -top-10 h-28 w-28 rounded-full bg-white/10"></div>
                 <div class="absolute -bottom-12 right-12 h-24 w-24 rounded-full bg-white/10"></div>
                 <!-- Header Content -->
-                <div class="relative flex items-center gap-3">
+                <div class="relative flex items-center gap-2 md:gap-3">
                     <!-- Icon -->
                     <div
                         class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/15 text-white shadow-lg backdrop-blur-md">
@@ -180,7 +179,7 @@
 
                     <!-- Title -->
                     <div class="min-w-0 flex-1">
-                        <h3 class="line-clamp-2 text-sm font-bold text-white">
+                        <h3 class="line-clamp-2 text-sm font-normal md:font-bold text-white">
                             {{ $selectedNotification?->title }}
                         </h3>
                         <p class="mt-1 text-xs text-white/70">
@@ -197,8 +196,8 @@
             </div>
 
             <!-- Body -->
-            <div class="px-5 py-5">
-                <div class="rounded-xl border border-border bg-background/50 p-4">
+            <div class="p-2 md:p-4">
+                <div class="rounded-xl border border-border bg-background/50 p-2 md:p-4">
                     <p class="text-sm leading-7 text-foreground/80">
                         {{ $selectedNotification?->description }}
                     </p>
@@ -207,7 +206,7 @@
 
 
             <!-- Footer -->
-            <div class="flex items-center justify-end border-t border-border bg-card/50 px-5 py-4">
+            <div class="flex items-center justify-end border-t border-border bg-card/50 p-2 md:p-4">
                 <button type="button" wire:click="closeNotification"
                     class="flex items-center gap-2 rounded-lg bg-airtel px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all hover:scale-[1.02] hover:shadow-lg cursor-pointer">
                     <i class="ri-check-line"></i>

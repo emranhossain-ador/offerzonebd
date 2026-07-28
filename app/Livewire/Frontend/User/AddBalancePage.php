@@ -18,7 +18,7 @@ class AddBalancePage extends Component
 
     public $pageTitle = 'amount';
     public $step = 1;
-    public $amount = '';
+    public int $amount;
 
     public $pay_method_id = '';
     public $pay_method_name = '';

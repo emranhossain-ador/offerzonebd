@@ -1,19 +1,20 @@
 <div class="main-content">
     <div
-        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 p-5 shadow-2xl">
+        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 px-2 py-3.5 md:p-5 shadow-2xl">
         <!-- Blur Circles -->
         <div class="absolute -right-5 -top-12 w-30 h-30 bg-white/20 rounded-full">
         </div>
         <div class="absolute right-5 -bottom-10 w-24 h-24 bg-white/10 rounded-full">
         </div>
         <!-- Content -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3 md:gap-4">
             <!-- Icon -->
             <a href="{{ route('user.home', ['username' => _auth()->username]) }}"
-                class="w-14 h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 transition-all hover:bg-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg"
+                class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 transition-all hover:bg-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg"
                 wire:navigate>
 
-                <div class="w-9 h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <div
+                    class="w-8 h-8 md:w-9 md:h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="lucide lucide-arrow-left h-5 w-5" aria-hidden="true"
@@ -26,7 +27,7 @@
 
             <!-- Text -->
             <div class="flex-1">
-                <h2 class="text-white text-lg font-bold">
+                <h2 class="text-white text-base md:text-lg font-bold">
                     Mobile Recharge
                 </h2>
                 <p class="text-white/80 text-sm">
@@ -41,7 +42,7 @@
 
         </div>
         <!-- Dotted Decoration -->
-        <div class="absolute right-30 top-4 grid grid-cols-4 gap-2 opacity-30">
+        <div class="absolute right-30 top-4 grid grid-cols-4 gap-1 md:gap-2 opacity-30">
 
             <span class="w-1 h-1 rounded-full bg-white"></span>
             <span class="w-1 h-1 rounded-full bg-white"></span>
@@ -126,8 +127,8 @@
 
                     @if ($this->lowBalance == true)
                         <div
-                            class="p-4 bg-amber-500/5 border border-amber-500/20 border-l-4 border-l-amber-500 rounded-sm">
-                            <h6 class="text-sm font-medium text-amber-500">⚠️ পর্যাপ্ত ব্যালেন্স নেই। আগে
+                            class="p-2 md:p-4 bg-amber-500/5 border border-amber-500/20 border-l-4 border-l-amber-500 rounded-sm">
+                            <h6 class="text-xs md:text-sm font-medium text-amber-500">⚠️ পর্যাপ্ত ব্যালেন্স নেই। আগে
                                 <a href="{{ route('add-balance', ['username' => $username]) }}"
                                     class="text-primary underline" wire:navigate>
                                     ব্যালেন্স অ্যাড করুন

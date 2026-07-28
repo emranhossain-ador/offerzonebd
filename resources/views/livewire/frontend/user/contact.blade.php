@@ -1,24 +1,25 @@
 <div class="main-content">
 
     <div
-        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 p-4 shadow-2xl">
+        class="relative overflow-hidden rounded-b-3xl bg-linear-to-r from-violet-600 via-indigo-600 to-cyan-500 px-2 py-3.5 md:p-5 shadow-2xl">
         <!-- Blur Circles -->
         <div class="absolute -right-5 -top-12 w-30 h-30 bg-white/20 rounded-full">
         </div>
         <div class="absolute right-5 -bottom-10 w-24 h-24 bg-white/10 rounded-full">
         </div>
         <!-- Content -->
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3 md:gap-4">
             <!-- Icon -->
             <a href="{{ route('user.settings', ['username' => $username]) }}"
-                class="w-14 h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 transition-all hover:bg-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg"
-                wire:navigate="">
+                class="w-12 h-12 md:w-14 md:h-14 shrink-0 rounded-xl bg-white/10 border border-white/20 transition-all hover:bg-white/20 backdrop-blur-xl flex items-center justify-center shadow-lg"
+                wire:navigate>
 
-                <div class="w-9 h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
+                <div
+                    class="w-8 h-8 md:w-9 md:h-9 shrink-0 rounded-full bg-white/20 flex items-center justify-center text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="lucide lucide-arrow-left h-5 w-5" aria-hidden="true"
-                        data-tsd-source="/src/components/app/PageHero.tsx:15:13">
+                        stroke-linejoin="round" class="lucide lucide-arrow-left h-4 w-4 md:h-5 md:w-5"
+                        aria-hidden="true" data-tsd-source="/src/components/app/PageHero.tsx:15:13">
                         <path d="m12 19-7-7 7-7"></path>
                         <path d="M19 12H5"></path>
                     </svg>
@@ -27,7 +28,7 @@
 
             <!-- Text -->
             <div>
-                <h2 class="text-white text-lg font-bold">
+                <h2 class="text-white text-base md:text-lg font-bold">
                     Support
                 </h2>
                 <p class="text-white/80 text-sm">
@@ -36,7 +37,7 @@
             </div>
         </div>
         <!-- Dotted Decoration -->
-        <div class="absolute right-30 top-4 grid grid-cols-4 gap-2 opacity-30">
+        <div class="absolute right-30 top-4 grid grid-cols-4 gap-1 md:gap-2 opacity-30">
 
             <span class="w-1 h-1 rounded-full bg-white"></span>
             <span class="w-1 h-1 rounded-full bg-white"></span>
@@ -62,10 +63,10 @@
     </div>
 
 
-    <main class="px-1.5 md:px-3.5 py-4 space-y-7">
-        <div class="rounded-2xl border border-border bg-card p-5 text-center shadow-sm">
+    <main class="px-1.5 md:px-3.5 py-2 md:py-4 space-y-7">
+        <div class="rounded-2xl border border-border bg-card p-3.5 md:p-5 text-center shadow-sm">
             <div
-                class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#F82769]/10 to-[#52163C]/10">
+                class="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-[#F82769]/10 to-[#52163C]/10">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
                     class="text-2xl text-[#F82769]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -93,7 +94,7 @@
             <p class="px-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Quick Help</p>
 
             <a href="{{ route('faq-page', ['username' => $username]) }}"
-                class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]"
+                class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-2 md:p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]"
                 wire:navigate>
 
                 <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#F82769]/10">
@@ -121,7 +122,7 @@
 
             @if (!empty($contactInfo->phone))
                 <a href="tel:{{ $contactInfo->phone }}"
-                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
+                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-2 md:p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
 
                     <div
                         class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-900/20">
@@ -151,7 +152,7 @@
 
             @if (!empty($contactInfo->whatsapp))
                 <a href="https://wa.me/{{ $contactInfo->whatsapp }}" target="_blank" rel="noopener noreferrer"
-                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
+                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-2 md:p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
                     <div
                         class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-50 dark:bg-green-900/20">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
@@ -179,7 +180,7 @@
 
             @if (!empty($contactInfo->email))
                 <a href="mailto:{{ $contactInfo->email }}"
-                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
+                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-2 md:p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
                     <div
                         class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-50 dark:bg-amber-900/20">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
@@ -208,7 +209,7 @@
 
             @if (!empty($contactInfo->telegram))
                 <a href="tg://resolve?domain={{ $contactInfo->telegram }}" target="_blank" rel="noopener noreferrer"
-                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
+                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-2 md:p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
                     <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0088cc]/10">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
                             class="text-2xl text-[#0088cc]" height="1em" width="1em"
@@ -235,7 +236,7 @@
 
             @if (!empty($contactInfo->facebook))
                 <a href="{{ $contactInfo->facebook }}" target="_blank"
-                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
+                    class="flex w-full items-center gap-3 rounded-2xl border border-border bg-card p-2 md:p-4 text-left shadow-sm transition-all hover:border-[#F82769]/20 hover:shadow-md active:scale-[0.99]">
                     <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1877F2]/10">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
                             class="text-2xl text-[#1877F2]" height="1em" width="1em"
