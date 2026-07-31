@@ -58,7 +58,7 @@ new class extends Component {
                                     href="{{ route('admin.add-balance-details', $depositInfo->id) }}">
 
                                     <span
-                                        class="flex items-center justify-center h-10 w-10 rounded bg-emerald-500 shadow-[0_3px_7px] shadow-emerald-500/40">
+                                        class="flex items-center justify-center h-10 w-10 shrink-0 rounded bg-emerald-500 shadow-[0_3px_7px] shadow-emerald-500/40">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -70,7 +70,7 @@ new class extends Component {
                                         </svg>
                                     </span>
 
-                                    <span class="block">
+                                    <div class="block">
                                         <!-- title -->
                                         <span
                                             class="text-sm font-semibold text-foreground line-clamp-1 flex items-center gap-3">
@@ -78,10 +78,10 @@ new class extends Component {
                                             <span
                                                 class="text-xs tracking-wide bg-emerald-500/10 px-2 py-0.5 rounded-md text-emerald-500 font-semibold">New</span></span>
 
-                                        <span class="text-[13px] flex items-center gap-2 text-foreground">Amount:
+                                        <span class="text-[13px] text-foreground">Amount:
                                             {{ $depositInfo->amount }} Taka</span>
 
-                                    </span>
+                                    </div>
 
                                     <span
                                         class="absolute bottom-2.5 right-1.5 md:right-3 text-xs text-white rounded-sm tracking-wide bg-sky-500 px-2 py-0.5 font-semibold">
@@ -103,7 +103,7 @@ new class extends Component {
                                     href="{{ route('admin.mobile-recharge-request') }}">
 
                                     <span
-                                        class="flex items-center justify-center h-10 w-10 rounded bg-purple-500 shadow-[0_3px_7px] shadow-purple-500/40">
+                                        class="flex items-center justify-center h-10 w-10 shrink-0 rounded bg-purple-500 shadow-[0_3px_7px] shadow-purple-500/40">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                             stroke-linecap="round" stroke-linejoin="round"
@@ -115,7 +115,7 @@ new class extends Component {
                                         </svg>
                                     </span>
 
-                                    <span class="block">
+                                    <div class="block">
                                         <!-- title -->
                                         <span
                                             class="text-sm font-semibold text-foreground line-clamp-1 flex items-center gap-3">
@@ -123,11 +123,11 @@ new class extends Component {
                                             <span
                                                 class="text-xs tracking-wide bg-purple-500/10 px-2 py-0.5 rounded-md text-purple-500 font-semibold">New</span></span>
 
-                                        <span class="text-[13px] flex items-center gap-2 text-foreground">Amount:
+                                        <span class="text-[13px] text-foreground">Amount:
                                             {{ $rechargeInfo->amount }}
                                             Taka</span>
 
-                                    </span>
+                                    </div>
 
                                     <span
                                         class="absolute bottom-2.5 right-1.5 text-xs text-white rounded-sm tracking-wide bg-sky-500 px-2 py-0.5 font-semibold">
@@ -149,7 +149,7 @@ new class extends Component {
                                     href="{{ route('admin.brilliant-recharge-request') }}">
 
                                     <span
-                                        class="flex items-center justify-center h-10 w-10 rounded bg-rose-500 shadow-[0_3px_7px] shadow-rose-500/40">
+                                        class="flex items-center justify-center h-10 w-10 shrink-0 rounded bg-rose-500 shadow-[0_3px_7px] shadow-rose-500/40">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -164,7 +164,7 @@ new class extends Component {
                                         </svg>
                                     </span>
 
-                                    <span class="block">
+                                    <div class="block">
                                         <!-- title -->
                                         <span
                                             class="text-sm mb-1 font-semibold text-foreground line-clamp-1 flex items-center gap-3">
@@ -172,10 +172,10 @@ new class extends Component {
                                             <span
                                                 class="text-xs tracking-wide bg-rose-500/10 px-2 py-0.5 rounded-md text-rose-500 font-semibold">New</span></span>
 
-                                        <span class="text-[13px] flex items-center gap-2 text-foreground">
+                                        <span class="text-[13px] text-foreground">
                                             Amount: {{ $brilliantInfo->amount }} Taka
                                         </span>
-                                    </span>
+                                    </div>
 
                                     <span
                                         class="absolute bottom-2.5 right-1.5 text-xs text-white rounded-sm tracking-wide bg-sky-500 px-2 py-0.5 font-semibold">
@@ -197,7 +197,7 @@ new class extends Component {
                                     href="{{ route('admin.bill-payment-details', $notification->service_id) }}">
 
                                     <span
-                                        class="flex items-center justify-center h-10 w-10 rounded bg-pink-500 shadow-[0_3px_7px] shadow-pink-500/40">
+                                        class="flex items-center justify-center h-10 w-10 shrink-0 rounded bg-pink-500 shadow-[0_3px_7px] shadow-pink-500/40">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -209,7 +209,7 @@ new class extends Component {
                                         </svg>
                                     </span>
 
-                                    <span class="block">
+                                    <div class="block">
                                         <!-- title -->
                                         <span
                                             class="text-sm mb-1 font-semibold text-foreground line-clamp-1 flex items-center gap-3">
@@ -217,10 +217,10 @@ new class extends Component {
                                             <span
                                                 class="text-xs tracking-wide bg-pink-500/10 px-2 py-0.5 rounded-md text-pink-500 font-semibold">New</span></span>
 
-                                        <span class="text-[13px] flex items-center gap-2 text-foreground">
+                                        <span class="text-[13px] text-foreground">
                                             Amount: {{ $billPaymentInfo->amount }} Taka
                                         </span>
-                                    </span>
+                                    </div>
 
                                     <span
                                         class="absolute bottom-2.5 right-1.5 text-xs text-white rounded-sm tracking-wide bg-sky-500 px-2 py-0.5 font-semibold">
@@ -229,7 +229,7 @@ new class extends Component {
                                 </a>
                             </li>
 
-                            <!-- This is for Diamond purchase -->
+                            <!-- This is for Sim package & Diamond purchase -->
                         @elseif ($notification->type === 'order')
                             @php
                                 $orderInfo = \App\Models\OrderList::where('id', $notification->service_id)->first();
@@ -240,7 +240,7 @@ new class extends Component {
 
                                     @if ($orderInfo->order_type === 'gaming_package')
                                         <span
-                                            class="flex items-center justify-center h-10 w-10 rounded bg-cyan-500 shadow-[0_3px_7px] shadow-cyan-500/40">
+                                            class="flex items-center justify-center h-10 w-10 shrink-0 rounded bg-cyan-500 shadow-[0_3px_7px] shadow-cyan-500/40">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -252,7 +252,7 @@ new class extends Component {
                                         </span>
                                     @else
                                         <span
-                                            class="flex items-center justify-center h-10 w-10 rounded bg-amber-500 shadow-[0_3px_7px] shadow-amber-500/40">
+                                            class="flex items-center justify-center h-10 w-10 shrink-0 rounded bg-amber-500 shadow-[0_3px_7px] shadow-amber-500/40">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -278,7 +278,7 @@ new class extends Component {
                                             <span
                                                 class="text-xs tracking-wide bg-amber-500/10 px-2 py-0.5 rounded-md text-amber-500 font-semibold">New</span></span>
 
-                                        <span class="text-[13px] flex items-center gap-2 text-foreground line-clamp-1">
+                                        <span class="text-[13px] text-foreground line-clamp-1">
                                             {{ $orderInfo->title }}
                                         </span>
 

@@ -80,7 +80,7 @@ new class extends Component {
                     <div
                         class="flex items-center gap-5 flex-col md:flex-row md:items-center justify-center md:justify-start ">
                         <!-- Image -->
-                        <div class="w-20 h-20">
+                        <div class="w-20 h-20 shrink-0">
                             <img src="{{ asset('assets/images/operator/' . $orderDetails->sim_package->operator . '.webp') }}"
                                 alt="{{ ucfirst($orderDetails->sim_package->operator) }}"
                                 class="h-full w-full object-cover">
@@ -125,7 +125,7 @@ new class extends Component {
             @elseif ($orderDetails->order_type == 'gaming_package')
                 <div class="card-body space-y-3 ">
                     <!-- Image -->
-                    <div class="w-32 h-auto">
+                    <div class="w-32 h-auto shrink-0">
                         <img src="{{ asset('assets/images/icon-diamond.png') }}" alt="Product Image"
                             class="w-full h-full object-cover">
                     </div>

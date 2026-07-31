@@ -50,8 +50,8 @@ new class extends Component {
             <thead>
                 <tr class="bg-muted text-foreground text-sm font-semibold text-left">
                     <th class="px-3 py-4 pl-5 whitespace-nowrap">No.</th>
-                    <th class="px-3 py-4 whitespace-nowrap">Image</th>
-                    <th class="px-3 py-4 whitespace-nowrap">Name</th>
+                    <th class="px-3 py-4 whitespace-nowrap">Name & Email</th>
+                    <th class="px-3 py-4 whitespace-nowrap">Username</th>
                     <th class="px-3 py-4 whitespace-nowrap">Orders & Joined</th>
                     <th class="px-3 py-4 whitespace-nowrap">Balance</th>
                     <th class="px-3 py-4 whitespace-nowrap">Status</th>
@@ -70,13 +70,12 @@ new class extends Component {
                         class="border-y border-border odd:bg-background text-foreground/80 font-normal tracking-wide text-sm">
                         <td class="px-3 py-4 pl-5 whitespace-nowrap">{{ $key + 1 }}</td>
                         <td class="px-3 py-4 whitespace-nowrap">
-                            <div
-                                class="w-12 h-12 overflow-hidden shrink-0 rounded-full border-2 border-primary shadow-md">
-                                <img src="{{ asset('assets/images/avatar.png') }}" alt="User"
-                                    class="w-full h-full object-cover rounded-full">
-                            </div>
+                            <p>{{ $customer->name }}</p>
+                            <p class="text-xs text-foreground/50">{{ $customer->email }}</p>
                         </td>
-                        <td class="px-3 py-4 whitespace-nowrap">{{ $customer->name }}</td>
+                        <td class="px-3 py-4 whitespace-nowrap">
+                            <p>{{ $customer->username }}</p>
+                        </td>
                         <td class="px-3 py-4">
                             @if ($customerOrder > 0)
                                 <span
